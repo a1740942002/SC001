@@ -8,7 +8,7 @@ decomposition through the process.
 """
 
 from karel.stanfordkarel import *
-from StepUp import *
+from StepUp import turn_right, put
 
 def main():
     for i in range(3):
@@ -18,12 +18,20 @@ def main():
 
 
 def go_in():
+    """
+    pre: Karel facing East, and standing on the mountain.
+    post: Karel in the hole, and facing South.
+    """
     move()
     turn_right()
     move()
 
 
 def go_out():
+    """
+    pre: Karel in the hole, and facing South.
+    Post: Karel facing East, and standing on the mountain.
+    """
     turn_back()
     move()
     turn_right()
