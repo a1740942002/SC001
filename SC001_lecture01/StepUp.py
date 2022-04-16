@@ -11,29 +11,6 @@ Karel will be facing East at Street
 
 from karel.stanfordkarel import *
 
-# Ask: Do I need to hoist my defined function before main()?
-"""
-preCondition: [1, 1]
-postCondition: [5, 2]
-
-beeperPosition: [2, 1]
-
-Total move(): 5
-
-"""
-
-# i 沒用到，但還是要寫？
-
-def turn_right():
-    for i in range(3):
-        turn_left()
-
-
-def put(times):
-    for i in range(times):
-        put_beeper()
-
-
 def main():
     move()
     pick_beeper()
@@ -44,6 +21,16 @@ def main():
     move()
     put(99)
     move()
+
+
+def turn_right():
+    for i in range(3):
+        turn_left()
+
+
+def put(times):
+    for i in range(times):
+        put_beeper()
 
 
 # ----- DO NOT MODIFY CODE BELOW THIS LINE ----- #

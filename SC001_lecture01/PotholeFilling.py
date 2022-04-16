@@ -19,8 +19,8 @@ def main():
 
 def go_in():
     """
-    pre: Karel facing East, and standing on the mountain.
-    post: Karel in the hole, and facing South.
+    pre: Karel is facing East, and standing on the mountain.
+    post: Karel is in the hole, and facing South.
     """
     move()
     turn_right()
@@ -29,8 +29,8 @@ def go_in():
 
 def go_out():
     """
-    pre: Karel in the hole, and facing South.
-    Post: Karel facing East, and standing on the mountain.
+    pre: Karel is in the hole, and facing South.
+    Post: Karel is facing East, and standing on the mountain.
     """
     turn_back()
     move()
