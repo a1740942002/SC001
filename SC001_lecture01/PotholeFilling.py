@@ -13,7 +13,7 @@ from StepUp import turn_right, put
 def main():
     for i in range(3):
         go_in()
-        put(3)
+        put(99)
         go_out()
 
 
