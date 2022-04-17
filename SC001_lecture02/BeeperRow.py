@@ -11,7 +11,15 @@ from karel.stanfordkarel import *
 
 
 def main():
-    pass
+    # Because We move first then put beeper, so OBOB will happen on the first place.
+    check_beeper_and_put()
+    while front_is_clear():
+        move()
+        check_beeper_and_put()    
+        
+def check_beeper_and_put():
+    if not on_beeper():
+        put_beeper()
 
 
 # ----- DO NOT MODIFY CODE BELOW THIS LINE ----- #
