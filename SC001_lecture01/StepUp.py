@@ -19,7 +19,7 @@ def main():
     move()
     turn_right()
     move()
-    put(99)
+    put_beeper_by_number(99)
     move()
 
 
@@ -28,9 +28,13 @@ def turn_right():
         turn_left()
 
 
-def put(times):
-    for i in range(times):
+def put_beeper_by_number(numbers):
+    for i in range(numbers):
         put_beeper()
+
+def turn_back():
+    turn_left()
+    turn_left()
 
 
 # ----- DO NOT MODIFY CODE BELOW THIS LINE ----- #
