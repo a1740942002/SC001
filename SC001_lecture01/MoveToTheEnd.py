@@ -8,6 +8,7 @@ karel world
 """
 
 from karel.stanfordkarel import *
+from StepUp import turn_back
 
 
 def main():
@@ -17,6 +18,7 @@ def main():
     while front_is_clear():
         move()
     # When front is not clear
+    turn_back()
 
 
 # ----- DO NOT MODIFY CODE BELOW THIS LINE ----- #

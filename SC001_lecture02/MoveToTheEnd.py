@@ -10,6 +10,7 @@ karel world
 from karel.stanfordkarel import *
 
 
+
 def main():
     """
     Karel will move to the end of the first Street in any world
@@ -17,6 +18,11 @@ def main():
     while front_is_clear():
         move()
     # When front is not clear
+    turn_back()
+
+def turn_back():
+    turn_left()
+    turn_left()
 
 
 # ----- DO NOT MODIFY CODE BELOW THIS LINE ----- #
