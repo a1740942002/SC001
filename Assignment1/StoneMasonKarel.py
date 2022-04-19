@@ -94,3 +94,4 @@ def turn_right():
 
 if __name__ == '__main__':
     execute_karel_task(main)
+

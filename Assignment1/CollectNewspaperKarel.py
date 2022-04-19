@@ -16,7 +16,7 @@ def main():
     """
     TODO: Karel need to go out of the box and pick the beeper, then go back to the inital position.
     Pre-condition: Karel is at [3, 4] and the beeper is at [6, 3].
-    Post-condition: Karel is at [ 3,4 ] and the beeper is gone.
+    Post-condition: Karel is at [3, 4] and the beeper is gone.
     """
     go_out()
     pick_beeper()
