@@ -50,14 +50,14 @@ def go_back():
 
 def turn_right():
     """
-    This function will turn karel to its left 3 times, which means it will end up turn to its original facing right.
+    Karel will turn to its left 3 steps, which means it will end up turn to its original facing right.
     """
     for i in range(3):
         turn_left()
 
 def turn_around():
     """
-    This function will turn karel to its left 2 times, which means it will end up turn to its original facing back.
+    Karel will turn to its left 2 steps, which means it will end up turn to its original facing back.
     """
     for i in range(2):
         turn_left()
