@@ -36,8 +36,8 @@ def main():
 
 def check_and_fill_pillar():
     """
-    Pre-condition: Karel is facing East, with pillar unfilled.
-    Post-condition: Karel is facing East, with pillar filled.
+    Pre-condition: Karel is facing East with pillar unfilled, but could be either on top of the pillar or bottom of the pillar.
+    Post-condition: Karel is facing East with pillar filled, but could be either on top of the pillar or bottom of the pillar.
 
     Karel will reposition to fill the pillar depend on where it's facing, then reset it's facing to the East.
     """
@@ -61,14 +61,14 @@ def fill_pillar():
     Because of OBOB problem, we need to manually check beeper at the last step.
     """
     while(front_is_clear()):
-        check_beeper()
+        check_beeper_and_put()
         move()
     
     # Because OBOB Problem
-    check_beeper()
+    check_beeper_and_put()
 
 
-def check_beeper():
+def check_beeper_and_put():
     """
     Karel will check whether it's on the beeper, if not, it will put a beeper.
     """
