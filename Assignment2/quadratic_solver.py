@@ -17,8 +17,8 @@ import math
 
 def main():
     """
-		TODO: Ask user to input 3 variables, and to display the root result.
-		"""
+    TODO: Ask user to input 3 variables, and to display the root result.
+    """
 
     # Greeting
     print('stanCode Quadratic Solver!')
@@ -44,7 +44,7 @@ def main():
 
 def get_discriminant(a, b, c):
     """
-		Returns a discriminant result ( int ).
+    Returns a discriminant result ( int ).
 
     :param a: int, x^2's variable.
     :param b: int, x^1's variable.
@@ -55,13 +55,13 @@ def get_discriminant(a, b, c):
 
 def get_root(a, b, c, operator):
     """
-		Returns a root result ( int ), if there is no result, will return -Infinity.
+    Returns a root result ( int ), if there is no result, will return -Infinity.
 
-		:param a: int, x^2's variable.
-		:param b: int, x^1's variable.
-		:param c: int, x^0's variable.
-		:param operator: str, should be '+' or '-'.
-		"""
+    :param a: int, x^2's variable.
+    :param b: int, x^1's variable.
+    :param c: int, x^0's variable.
+    :param operator: str, should be '+' or '-'.
+    """
     result = -INFINITY
     if operator == '+':
         result = (-b + math.sqrt(get_discriminant(a, b, c))) / 2 * a
