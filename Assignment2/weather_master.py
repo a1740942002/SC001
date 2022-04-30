@@ -14,7 +14,14 @@ EXIT = -100
 
 def main():
 	"""
-	TODO: Ask user to input a integar, calculate and display the result when user decide to leave.
+	TODO: Ask user to input a temperature, calculate and display the result when user decide to leave.
+
+	The Reuslt should include:
+		1. Highest temperature
+		2. Lowest temperature
+		3. Cold day counts
+		4. Temperature average
+
 	"""
 	print('stanCode "Weather Master 4.0"!')
 
