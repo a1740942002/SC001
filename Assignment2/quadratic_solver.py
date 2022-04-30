@@ -26,15 +26,15 @@ def main():
     a = int(input('Enter a: '))
     b = int(input('Enter b: '))
     c = int(input('Enter c: '))
-    discriminantResult = getDiscriminant(a, b, c)
+    discriminant_result = get_discriminant(a, b, c)
     result = ''
 
-    if discriminantResult > 0:
-        answer1 = getRoot(a, b, c, '+')
-        answer2 = getRoot(a, b, c, '-')
+    if discriminant_result > 0:
+        answer1 = get_root(a, b, c, '+')
+        answer2 = get_root(a, b, c, '-')
         result = 'Two roots: ' + str(answer1) + ', ' + str(answer2)
-    elif discriminantResult == 0:
-        answer = getRoot(a, b, c, '+')
+    elif discriminant_result == 0:
+        answer = get_root(a, b, c, '+')
         result = 'One root: ' + str(answer)
     else:
         result = 'No real roots'
@@ -42,7 +42,7 @@ def main():
     print(result)
 
 
-def getDiscriminant(a, b, c):
+def get_discriminant(a, b, c):
     """
 		Returns a discriminant result ( int ).
 
@@ -53,7 +53,7 @@ def getDiscriminant(a, b, c):
     return b * b - 4 * a * c
 
 
-def getRoot(a, b, c, operator):
+def get_root(a, b, c, operator):
     """
 		Returns a root result ( int ), if there is no result, will return -Infinity.
 
@@ -64,9 +64,9 @@ def getRoot(a, b, c, operator):
 		"""
     result = -INFINITY
     if operator == '+':
-        result = (-b + math.sqrt(getDiscriminant(a, b, c))) / 2 * a
+        result = (-b + math.sqrt(get_discriminant(a, b, c))) / 2 * a
     elif operator == '-':
-        result = (-b - math.sqrt(getDiscriminant(a, b, c))) / 2 * a
+        result = (-b - math.sqrt(get_discriminant(a, b, c))) / 2 * a
     return result
 
 

@@ -26,13 +26,13 @@ def main():
       print('Have a good one!')
       break
 
-    if isPrime(n):
+    if is_prime(n):
       print(str(n) + ' is a prime number.')
     else:
       print(str(n) + ' is not a prime number.')
 
 
-def isPrime(n):
+def is_prime(n):
   """
   Returns a Boolean result whether int 'n' is a prime number.
 

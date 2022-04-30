@@ -1,6 +1,6 @@
 """
 File: hailstone.py
-Name:
+Name: Brian Lai
 -----------------------
 This program should implement a console program that simulates
 the execution of the Hailstone sequence, defined by Douglas
@@ -17,19 +17,19 @@ def main():
     step_count = 0
 
     while n != 1:
-        if isOdd(n):
-            new_n = getOddResult(n)
+        if is_odd(n):
+            new_n = get_odd_result(n)
             print(str(n) + ' is odd, so I make 3n+1: ' + str(new_n))
             n = new_n
         else:
-            new_n = getEvenResult(n)
+            new_n = get_even_result(n)
             print(str(n) + ' is even, so I take half: ' + str(new_n))
             n = new_n
         step_count += 1
     print('It took ' + str(step_count) + ' steps to reach 1')
 
 
-def isOdd(n):
+def is_odd(n):
     """
     Returns a Boolean result tell us whether this number is odd or not.
 
@@ -38,7 +38,7 @@ def isOdd(n):
     return n % 2 != 0
 
 
-def getOddResult(n):
+def get_odd_result(n):
     """
     Returns a Int result, do some calculate on the original input number.
 
@@ -47,7 +47,7 @@ def getOddResult(n):
     return int(3*n + 1)
 
 
-def getEvenResult(n):
+def get_even_result(n):
     """
     Returns a Int result, half the original input number.
 
