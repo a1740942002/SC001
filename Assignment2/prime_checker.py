@@ -35,6 +35,8 @@ def main():
 def isPrime(n):
   """
   Returns a Boolean result whether int 'n' is a prime number.
+
+  :param n: int, a int number.
   """
   for i in range(n):
     # A prime number is that only 1 and itself could divide it without getting any decimal number.
