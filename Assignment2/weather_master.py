@@ -79,7 +79,7 @@ def get_average(total, count):
 
 def is_cold_day(temperature):
 	"""
-	Given 1 new temperature, return whether is cold day.
+	Given 1 temperature, return whether is cold day (boolean).
 
 	:param temperature: int
 	"""
@@ -90,7 +90,7 @@ def is_cold_day(temperature):
 
 def get_higher_number(number_1, number_2):
 	"""
-	Given 2 int, return higher one.
+	Given 2 int, return higher one (int).
 
 	:params number_1: int
 	:params number_2: int
@@ -103,7 +103,7 @@ def get_higher_number(number_1, number_2):
 
 def get_lower_number(number_1, number_2):
 	"""
-	Given 2 int, return lower one.
+	Given 2 int, return lower one (int).
 
 	:params number_1: int
 	:params number_2: int
