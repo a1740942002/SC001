@@ -55,7 +55,7 @@ def getDiscriminant(a, b, c):
 
 def getRoot(a, b, c, operator):
     """
-		Returns a root result ( int ).
+		Returns a root result ( int ), if there is no result, will return -Infinity.
 
 		:param a: int, x^2's variable.
 		:param b: int, x^1's variable.
