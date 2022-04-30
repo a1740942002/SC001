@@ -10,7 +10,10 @@ and concatenation
 
 
 def main():
-    pass
+    meal = int(input('How much was your meal? '))
+    tax = float(input('Tax: '))
+    total = meal * (1+tax)
+    print('Total: ' + str(total) + '!')
 
 
 # ----- DO NOT MODIFY CODE BELOW THIS LINE ----- #

@@ -12,7 +12,16 @@ SECRET = 32
 
 
 def main():
-    pass
+    print('Guess a number from 0-99')
+    guess = int(input('Your guess '))
+    while guess != SECRET:
+        if(guess > SECRET):
+            print('Too high')
+        elif(guess < SECRET):
+            print('Too low')
+        guess = int(input('Your guess '))
+    print('Contrat! The secret: ' + str(SECRET))
+        
 
 
 # ----- DO NOT MODIFY CODE BELOW THIS LINE ----- #

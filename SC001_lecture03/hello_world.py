@@ -9,7 +9,9 @@ Python syntax
 
 
 def main():
-	pass
+	print('Hello, World!', end="")
+	print('Facvorite Movie: The Dark Knight', end="")
+	print('Fun FactL: I am allergic to alpaca', end="")
 
 
 # ----- DO NOT MODIFY CODE BELOW THIS LINE ----- #

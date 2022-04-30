@@ -24,7 +24,11 @@ def my_smaller(n1, n2):
     :param n2:
     :return:
     """
-    pass
+    if(n2 > n1):
+        return n1
+    elif(n2 < n1):
+        return n2
+    return n1
 
 
 # ----- DO NOT MODIFY CODE BELOW THIS LINE ----- #
