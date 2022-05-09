@@ -1,6 +1,6 @@
 """
 File: rocket.py
-Name:
+Name: Brian Lai
 -----------------------
 This program should implement a console program
 that draws ASCII art - a rocket.
@@ -27,15 +27,27 @@ def main():
 
 
 def create_head(size):
+    """
+    :param size: int, the rocket's size.
+
+    Will print rocket's head.
+    """
     for i in range(size):
         row = i + 1
         inline_print(' ')
-        create_head_by_direction(row, size,'left')
-        create_head_by_direction(row, size,'right')
+        create_head_layer(row, size, 'left')
+        create_head_layer(row, size, 'right')
         inline_print(' ')
         print('')
 
-def create_head_by_direction(row, size,direction):
+def create_head_layer(row, size, direction):
+    """
+    :param row: int ( from 1 to size ), the rocket's current head layer.
+    :param size: int, the rocket's size.
+    :param direction: string ( 'left' or 'right'), the rocket's head layer direction.
+
+    Will print rocket's half head ( left or right ).
+    """
     is_left = direction == 'left'
     is_right = direction == 'right'
     half_width = size - row
@@ -56,6 +68,11 @@ def create_head_by_direction(row, size,direction):
 
 
 def create_belt(size):
+    """
+    :param size: int, the rocket's size.
+
+    Will print rocket's belt.
+    """
     inline_print('+')
     for i in range( 2 * size):
         inline_print('=')
@@ -64,6 +81,11 @@ def create_belt(size):
 
 
 def create_upper(size):
+    """
+    :param size: int, the rocket's size.
+
+    Will print rocket's upper body.
+    """
     for i in range(size):
         row = i + 1
         inline_print('|')
@@ -73,6 +95,11 @@ def create_upper(size):
 
 
 def create_lower(size):
+    """
+    :param size: int, the rocket's size.
+
+    Will print rocket's lower body.
+    """
     for i in range(size):
         row = i + 1
         inline_print('|')
@@ -82,6 +109,12 @@ def create_lower(size):
 
 
 def create_upper_layer(row, size):
+    """
+    :param row: int ( from 1 to size ), the rocket's current upper body layer.
+    :param size: int, the rocket's size.
+
+    Will print rocket's upper layer.
+    """
     card_count = row
     dot_count = size * 2 - card_count * 2
     half_dot_count = int( dot_count / 2 )
@@ -97,6 +130,12 @@ def create_upper_layer(row, size):
 
 
 def create_lower_layer(row, size):
+    """
+    :param row: int ( from 1 to size ), the rocket's current lower body layer.
+    :param size: int, the rocket's size.
+
+    Will print rocket's lower layer.
+    """
     card_count = size - row + 1
     dot_count = size * 2 - card_count * 2
     half_dot_count = int( dot_count / 2 )
@@ -112,6 +151,9 @@ def create_lower_layer(row, size):
 
 
 def inline_print(str):
+    """
+    Will print inline.
+    """
     print(str, end='')
 
 ###### DO NOT EDIT CODE BELOW THIS LINE ######
