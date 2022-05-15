@@ -20,7 +20,7 @@ N_TURNS = 7
 
 def main():
     """
-    TODO:
+    TODO: A Hangman or Wordle game which user can input a character to guess correct word in limited chances.
     """
 
     # Init Data
@@ -28,6 +28,8 @@ def main():
     answer = random_word()
     left_answer = answer
     guess = get_init_guess(len(answer))
+    raw_guess_char = ''
+    is_valid_input = False
 
     while True:
         # Lose Condition
@@ -39,21 +41,30 @@ def main():
         elif guess == answer:
             print('You win!!')
             break
-
+            
         # Normal Condition
-        print('The word looks like ' + guess)
-        print('You have ' + str(left_life) + ' wrong guesses left.')
-        raw_guess_char = input('Your guess: ')
-        guess_char = raw_guess_char.upper()
-        is_guess_correct = answer.find(guess_char) >= 0
-
-        if is_guess_correct:
-            print('You are correct!')
-            guess = get_updated_guess(guess, answer, guess_char)
-            left_answer = get_updated_left_answer(left_answer, guess_char)
         else:
-            print("There is no " + guess_char + "'s in the word.")
-            left_life -= 1
+            print('The word looks like ' + guess)
+            print('You have ' + str(left_life) + ' wrong guesses left.')
+            raw_guess_char = input('Your guess: ')
+            is_valid_input = len(raw_guess_char) == 1 and raw_guess_char.isalpha()
+
+            # If is not valid input, throw Error
+            while not is_valid_input:
+                print("Illegal format.")
+                raw_guess_char = input('Your guess: ')
+                is_valid_input = len(raw_guess_char) == 1 and raw_guess_char.isalpha()
+
+            guess_char = raw_guess_char.upper()
+            is_guess_correct = answer.find(guess_char) >= 0
+
+            if is_guess_correct:
+                print('You are correct!')
+                guess = get_updated_guess(guess, answer, guess_char)
+                left_answer = get_updated_left_answer(left_answer, guess_char)
+            else:
+                print("There is no " + guess_char + "'s in the word.")
+                left_life -= 1
 
     print('The word was: ' + answer)
 
