@@ -13,10 +13,34 @@ Your job is to output the complement of it.
 
 def main():
     """
-    TODO:
+    TODO: Depend on user's input and print the correct complement of DNA.
     """
-    pass
+    userInput = input("Please give me a DNA strand and I'll find the complement: ")
+    result = build_complement(userInput)
+    print('The complement of ' + userInput + ' is ' + result)
 
+
+def build_complement(string):
+    """
+    :param string: string, Should only be consist of 'a', 'A', 't', 'T', 'c', 'C', 'g', 'G'.
+    :return : string
+    """
+    complement_string = ''
+
+    for rawChar in string:
+        char = rawChar.upper()
+        if char == 'A':
+            complement_string += 'T'
+        elif char == 'T':
+            complement_string += 'A'
+        elif char == 'G':
+            complement_string += 'C'
+        elif char == 'C':
+            complement_string += 'G'
+        else:
+            pass
+
+    return complement_string
 
 ###### DO NOT EDIT CODE BELOW THIS LINE ######
 if __name__ == '__main__':

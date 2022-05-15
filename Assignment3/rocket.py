@@ -16,7 +16,7 @@ SIZE = 10
 
 def main():
     """
-    TODO:
+    TODO: Create ( Print ) a Rocket which can be resize by constant SIZE.
     """
     create_head(SIZE)
     create_belt(SIZE)
