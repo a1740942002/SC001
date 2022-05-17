@@ -9,6 +9,7 @@ where each SimpleImage is made up of many pixels.
 
 from simpleimage import SimpleImage
 
+FILE_PATH = './images/stanford.jpg'
 
 def main():
     """
@@ -16,7 +17,10 @@ def main():
     You should save the return value of the image and then
     call .show() to visualize the output of your program.
     """
-    pass
+    img = SimpleImage(FILE_PATH)
+    for pixel in img:
+        pixel.blue = 250
+    img.show()
 
 
 def red_channel(img):
