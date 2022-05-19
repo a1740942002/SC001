@@ -1,6 +1,6 @@
 """
 File: fire.py
-Name:
+Name: Brian
 ---------------------------------
 This file contains a method called
 highlight_fires which detects the
@@ -15,15 +15,29 @@ HURDLE_FACTOR = 1.05
 
 def highlight_fires(filename):
     """
-    :param filename:
-    :return:
+    :param filename: string, the file path of the original image.
+    :return: SimpleImage, highlight fire and grey-scaled image.
     """
-    return 0
+    img = SimpleImage(filename)
+
+    for pixel in img:
+        rbg_avg = ( pixel.red + pixel.green + pixel.blue ) // 3
+        is_fire = pixel.red > rbg_avg * HURDLE_FACTOR
+
+        if is_fire :
+            pixel.red = 255
+            pixel.green = 0
+            pixel.blue = 0
+        else:
+            pixel.red = rbg_avg
+            pixel.green = rbg_avg
+            pixel.blue = rbg_avg
+    return img
 
 
 def main():
     """
-    TODO:
+    TODO: Detect Where is firing and Highligt the firing area.
     """
     original_fire = SimpleImage('images/greenland-fire.png')
     original_fire.show()
