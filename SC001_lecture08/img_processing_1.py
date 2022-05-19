@@ -17,11 +17,8 @@ def main():
     You should save the return value of the image and then
     call .show() to visualize the output of your program.
     """
-    img = SimpleImage(FILE_PATH)
-    for pixel in img:
-        pixel.blue = 250
-    img.show()
-
+    red_image = red_channel(SimpleImage(FILE_PATH))
+    red_image.show()
 
 def red_channel(img):
     """
@@ -31,7 +28,10 @@ def red_channel(img):
     :param img: SimpleImage, the original image
     :return: SimpleImage, the updated image with all pixels turning red
     """
-    pass
+    for pixel in img:
+        pixel.green = 0
+        pixel.blue = 0
+    return img
 
 
 # ----- DO NOT MODIFY CODE BELOW THIS LINE ----- #

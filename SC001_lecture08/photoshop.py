@@ -16,6 +16,7 @@ from simpleimage import SimpleImage
 THRESHOLD = 1.3
 
 # Controls the upper bound for black pixel
+# 黑色不一定叫 000，而是加起來小於某個數值都會是黑的
 BLACK_PIXEL = 120
 
 
@@ -28,9 +29,9 @@ def combine(bg, me):
     for y in range(bg.height):
         for x in range(bg.width):
             pixel_me = me.get_pixel(x, y)
-            avg = (pixel_me.red+pixel_me.blue+pixel_me.green) // 3
-            total = pixel_me.red+pixel_me.blue+pixel_me.green
-            if pixel_me.green > avg*THRESHOLD and total > BLACK_PIXEL:
+            avg = (pixel_me.red + pixel_me.blue + pixel_me.green) // 3
+            total = pixel_me.red + pixel_me.blue + pixel_me.green
+            if pixel_me.green > avg * THRESHOLD and total > BLACK_PIXEL:
                 pixel_bg = bg.get_pixel(x, y)
                 pixel_me.red = pixel_bg.red
                 pixel_me.blue = pixel_bg.blue
